@@ -53,7 +53,7 @@ button,input,textarea{font:inherit}
 .hero__script{display:block;font-family:"Great Vibes",cursive;font-size:clamp(58px,18vw,112px);font-weight:400;color:var(--prata-brilho)}
 .hero__subtitle{display:block;margin-top:8px;font-family:Montserrat,sans-serif;font-size:clamp(16px,5vw,28px);letter-spacing:clamp(.35em,2vw,.7em);text-indent:.35em}
 .hero__text{max-width:560px;margin:20px auto;font-size:18px;color:var(--prata-suave)}
-.hero__buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.hero__buttons{display:none}
 .button{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border:1px solid transparent;font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;position:relative;overflow:hidden}
 .button--primary{background:var(--prata);color:#171717}
 .button--primary:hover{background:var(--prata-brilho)}
@@ -140,7 +140,7 @@ button,input,textarea{font:inherit}
 .developer-links a{border-bottom:1px solid rgba(217,217,217,.25)}
 .footer__bottom{position:relative;margin-top:42px;padding-top:18px;border-top:1px solid rgba(217,217,217,.12);text-align:center;font-size:14px}
 .oab-note{color:var(--prata-suave);font-size:12px}
-.back-to-top{position:fixed;z-index:900;right:18px;bottom:86px;width:44px;height:44px;border:1px solid rgba(217,217,217,.35);border-radius:50%;background:rgba(20,20,20,.9);color:#fff;opacity:0;pointer-events:none;transition:.3s}
+.back-to-top{position:fixed;z-index:900;right:18px;bottom:calc(86px + env(safe-area-inset-bottom));width:44px;height:44px;border:1px solid rgba(217,217,217,.35);border-radius:50%;background:rgba(20,20,20,.9);color:#fff;opacity:0;pointer-events:none;transition:.3s}
 .back-to-top.visible{opacity:1;pointer-events:auto}
 .whatsapp-float{position:fixed;z-index:950;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.35);animation:whatsappPulse 2.2s infinite}
 .whatsapp-float svg{width:32px;height:32px;fill:currentColor}
@@ -178,6 +178,7 @@ button,input,textarea{font:inherit}
   .instagram-mini{width:40px;height:40px}
   .nav__menu{order:2}
   .hero__content{bottom:8%}
+  .hero__buttons{display:none}
   .about__grid{grid-template-columns:.8fr 1.2fr;align-items:center}
   .about__gallery{grid-template-rows:300px 220px}
   .team__grid{grid-template-columns:repeat(2,1fr);gap:24px}
